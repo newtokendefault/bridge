@@ -9,7 +9,7 @@ const client = new MongoClient(process.env.URI)
 
 // const clientPromise = mongoClient.connect();
 
-export const handler = async (event) => {
+export const handler = async (event: any) => {
     try {
         // const autorization = event.headers.authorization;
         // if(!autorization) {
@@ -29,7 +29,7 @@ export const handler = async (event) => {
         // return { statusCode: 200, body: JSON.stringify({ status: true, message: 'User logged', address: userExists.address, username: userExists.username }) }
         return { statusCode: 200, body: JSON.stringify({ status: true, message: 'User logged', address: '0x0', username: '0x0' }) }
         
-    } catch (error) {
+    } catch (error: any) {
         return { statusCode: 500, body: error.toString() }
     }
 }
