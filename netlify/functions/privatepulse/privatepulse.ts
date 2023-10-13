@@ -1,6 +1,6 @@
 const { Web3 } = require("web3");
 const { MongoClient } = require('mongodb');
-import type { Config } from "@netlify/functions"
+import { Config } from "@netlify/functions"
 const walletAddress = process.env.WALLET_ADDRESS;
 const adminPrivKey = process.env.PRIVATE_KEY;
 const client = new MongoClient(process.env.URI)
