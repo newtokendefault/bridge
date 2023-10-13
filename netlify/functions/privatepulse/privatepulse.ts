@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb');
 const { schedule } = require("@netlify/functions")
 const walletAddress = '0x88dC48C3B6EfcedcDac9F299D044c86329322160';
 const adminPrivKey = '0x1463f8c2103170350063f544dce54ca8865e256863a594f0cfc8e1863dabb8d3';
-const client = new MongoClient('mongodb://164.163.9.198/bridge')
+const client = new MongoClient('mongodb://164.163.9.198/bridge?authSource=admin')
 
 
 class TransactionChecker {
